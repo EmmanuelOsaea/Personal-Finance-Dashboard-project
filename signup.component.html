@@ -1,1 +1,87 @@
+<div class="signup-container">
+  <h2>Create Account</h2>
+  <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+    <!-- Full Name -->
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input
+        type="text"
+        id="fullName"
+        class="form-control"
+        placeholder="Enter your full name"
+        required
+        [(ngModel)]="fullName"
+        name="fullName"
+        #fullNameModel="ngModel"
+      />
+      <div *ngIf="fullNameModel.invalid && fullNameModel.touched" class="error">
+        Full name is required.
+      </div>
+    </div>
 
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your email"
+        required
+        [(ngModel)]="email"
+        name="email"
+        #emailModel="ngModel"
+      />
+      <div *ngIf="emailModel.invalid && emailModel.touched" class="error">
+        Valid email is required.
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        placeholder="Create a password"
+        required
+        [(ngModel)]="password"
+        name="password"
+        #passwordModel="ngModel"
+        minlength="8"
+      />
+      <div *ngIf="passwordModel.invalid && passwordModel.touched" class="error">
+        Password is required and must be at least 8 characters long.
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        class="form-control"
+        placeholder="Confirm your password"
+        required
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        #confirmPasswordModel="ngModel"
+        [ngClass]="{'is-invalid': confirmPassword !== password && confirmPasswordModel.touched}"
+      />
+      <div *ngIf="confirmPassword !== password && confirmPasswordModel.touched" class="error">
+        Passwords must match.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid">
+      Sign Up
+    </button>
+  </form>
+
+  <p class="login-link">
+    Already have an account? <a href="/login">Log in here</a>.
+  </p>
+</div>
