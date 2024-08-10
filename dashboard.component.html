@@ -1,1 +1,22 @@
+<!-- dashboard.component.html -->
+<div class="dashboard">
+  <header>
+    <h1>Personal Finance Dashboard</h1>
+  </header>
 
+  <section class="account-summary">
+    <h2>Account Summary</h2>
+    <!-- Example of dynamic data -->
+    <p>Total Balance: {{ totalBalance | currency }}</p>
+    <p>Monthly Expenses: {{ monthlyExpenses | currency }}</p>
+  </section>
+
+  <section class="recent-transactions">
+    <h2>Recent Transactions</h2>
+    <ul>
+      <li *ngFor="let transaction of recentTransactions">
+        {{ transaction.date }} - {{ transaction.description }}: {{ transaction.amount | currency }}
+      </li>
+    </ul>
+  </section>
+</div>
