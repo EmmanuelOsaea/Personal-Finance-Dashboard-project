@@ -1,1 +1,87 @@
 
+// Variables for colors and sizing
+$primary-color: #4CAF50; // Change to your preferred primary color
+$secondary-color: #ffffff;
+$hover-color: darken($primary-color, 10%);
+$font-family: 'Arial, sans-serif';
+
+.navbar {
+  background-color: $primary-color;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-family;
+
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: $secondary-color;
+    text-decoration: none;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  .navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: 16px;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: $secondary-color;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navbar-toggler {
+      display: block;
+    }
+
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        margin: 10px 0;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}
+
+// Example of how to trigger navbar-links in mobile view
+.active {
+  .navbar-links {
+    display: flex !important;
+  }
+}
