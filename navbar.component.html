@@ -1,91 +1,18 @@
-
-.navbar {
-  background-color: #007bff; // Primary color background
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      color: #f8f9fa; // Slightly lighter color on hover
-    }
-
-    img {
-      margin-right: 10px;
-      height: 30px;
-    }
-  }
-
-  .navbar-links {
-    display: flex;
-    align-items: center;
-
-    a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #f8f9fa; // Lighter color on hover
-      }
-    }
-
-    .btn {
-      margin-left: 20px;
-      padding: 8px 16px;
-      background-color: #28a745; // Green for buttons
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #218838; // Darker green on hover
-      }
-    }
-  }
-
-  .navbar-toggler {
-    display: none; // Hide the hamburger menu by default
-
-    @media (max-width: 768px) {
-      display: block;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      font-size: 24px;
-    }
-  }
-
-  .navbar-collapse {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    @media (max-width: 768px) {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-  }
-
-  .navbar-expand {
-    @media (max-width: 768px) {
-      .navbar-collapse {
-        display: flex;
-      }
-    }
-  }
-}
+ <nav class="navbar">
+  <a class="navbar-brand" href="/">
+    <img src="assets/logo.png" alt="Logo"> <!-- Replace with your logo path -->
+    Your Brand
+  </a>
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+    &#9776; <!-- Unicode for hamburger icon -->
+  </button>
+  <div class="navbar-collapse" [class.navbar-expand]="!isCollapsed">
+    <div class="navbar-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/services" class="nav-link">Services</a>
+      <a href="/contact" class="nav-link">Contact</a>
+      <button class="btn">Sign Up</button> <!-- Example button, could be a login/signup button -->
+    </div>
+  </div>
+</nav>
