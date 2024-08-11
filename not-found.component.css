@@ -1,0 +1,39 @@
+ /* not-found.component.css */
+
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+}
+
+.not-found-container h1 {
+  font-size: 72px;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.not-found-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.not-found-container a:hover {
+  text-decoration: underline;
+}
+
+.not-found-container img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}}
+
+
+
+
+
