@@ -7,7 +7,7 @@ import { GoalService } from '../services/goal.service'; // Assuming you have a G
 @Component({
   selector: 'app-goals',
   templateUrl: './goals.component.html',
-  styleUrls: ['./goals.component.scss']
+  styleUrls: ['./goals.component.css']
 })
 export class GoalsComponent implements OnInit {
   goals: Goal[] = [];
