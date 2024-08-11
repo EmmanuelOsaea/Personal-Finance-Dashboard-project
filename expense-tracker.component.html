@@ -1,1 +1,37 @@
+<!-- expense-tracker.component.html -->
+<div class="expense-tracker">
+  <h2>Expense Tracker</h2>
 
+  <!-- Form to Add New Expense -->
+  <form (ngSubmit)="addExpense()">
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" [(ngModel)]="newExpense.description" name="description" required>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" [(ngModel)]="newExpense.amount" name="amount" required>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" [(ngModel)]="newExpense.date" name="date" required>
+    </div>
+
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <!-- List of Expenses -->
+  <div class="expense-list">
+    <h3>Expenses</h3>
+    <ul>
+      <li *ngFor="let expense of expenses">
+        <span>{{ expense.description }}</span>
+        <span>{{ expense.amount | currency }}</span>
+        <span>{{ expense.date | date }}</span>
+        <button (click)="deleteExpense(expense)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
