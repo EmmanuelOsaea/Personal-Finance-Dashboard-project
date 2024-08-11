@@ -24,14 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/main.scss"
+              "src/styles.css",
+              "src/main.css"
             ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            },
+            
             "scripts": []
           },
           "configurations": {
