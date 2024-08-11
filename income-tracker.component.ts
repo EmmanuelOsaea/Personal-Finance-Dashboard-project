@@ -6,7 +6,7 @@ import { IncomeService } from '../services/income.service'; // Assuming you have
 @Component({
   selector: 'app-income-tracker',
   templateUrl: './income-tracker.component.html',
-  styleUrls: ['./income-tracker.component.scss']
+  styleUrls: ['./income-tracker.component.css']
 })
 export class IncomeTrackerComponent implements OnInit {
   incomes: Income[] = [];
