@@ -1,1 +1,15 @@
-
+<!-- goals.component.html -->
+<div class="goals-container">
+  <h2>Your Goals</h2>
+  
+  <div *ngFor="let goal of goals" class="goal-item">
+    <h3>{{ goal.title }}</h3>
+    <p>{{ goal.description }}</p>
+    <p>Target: {{ goal.targetAmount | currency }}</p>
+    <p>Saved: {{ goal.savedAmount | currency }}</p>
+    <p>Due Date: {{ goal.dueDate | date }}</p>
+    <button (click)="deleteGoal(goal.id)">Delete</button>
+  </div>
+  
+  <button (click)="addNewGoal()">Add New Goal</button>
+</div>
