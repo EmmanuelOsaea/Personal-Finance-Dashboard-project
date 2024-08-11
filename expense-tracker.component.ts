@@ -11,7 +11,7 @@ interface Expense {
 @Component({
   selector: 'app-expense-tracker',
   templateUrl: './expense-tracker.component.html',
-  styleUrls: ['./expense-tracker.component.scss']
+  styleUrls: ['./expense-tracker.component.css']
 })
 export class ExpenseTrackerComponent {
   expenses: Expense[] = [];
