@@ -1,1 +1,4 @@
-
+models/
+├── goal.model.ts
+├── income-model.ts
+└── user.model.ts
