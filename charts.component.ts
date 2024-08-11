@@ -6,7 +6,7 @@ import { ChartService } from '../services/chart.service';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.scss']
+  styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
   chartData: any;
