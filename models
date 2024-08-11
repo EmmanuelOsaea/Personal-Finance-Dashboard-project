@@ -1,4 +1,7 @@
-models/
-├── goal.model.ts
-├── income-model.ts
-└── user.model.ts
+
+src/
+├── app/
+│   ├── models/
+│   │   ├── user.model.ts
+│   │   ├── transaction.model.ts
+│   │   └── goal.model.ts
