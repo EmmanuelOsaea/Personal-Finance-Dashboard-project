@@ -1,34 +1,33 @@
-// app.component.css
 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
 
-  header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
+.app-container header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
 
-    nav {
-      margin-top: 10px;
+.app-container header nav {
+  margin-top: 10px;
+}
 
-      a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
+.app-container header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
 
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
+.app-container header nav a:hover {
+  text-decoration: underline;
+}
 
-  main {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
+.app-container main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
