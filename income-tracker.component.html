@@ -1,1 +1,14 @@
 
+<!-- income-tracker.component.html -->
+<div class="income-tracker-container">
+  <h2>Your Income</h2>
+  
+  <div *ngFor="let income of incomes" class="income-item">
+    <h3>{{ income.source }}</h3>
+    <p>Amount: {{ income.amount | currency }}</p>
+    <p>Date: {{ income.date | date }}</p>
+    <button (click)="deleteIncome(income.id)">Delete</button>
+  </div>
+  
+  <button (click)="addNewIncome()">Add New Income</button>
+</div>
