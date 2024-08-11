@@ -1,1 +1,13 @@
-
+pages/
+├── dashboard
+│   ├── dashboard.component.html
+│   ├── dashboard.component.scss
+│   └── dashboard.component.ts
+├── login
+│   ├── login.component.html
+│   ├── login.component.scss
+│   └── login.component.ts
+└── register
+    ├── register.component.html
+    ├── register.component.scss
+    └── register.component.ts
