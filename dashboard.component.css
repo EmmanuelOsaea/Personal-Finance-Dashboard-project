@@ -1,0 +1,39 @@
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.dashboard .account-summary,
+.dashboard .recent-transactions {
+  margin-top: 20px;
+}
+
+.dashboard .account-summary {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.dashboard .recent-transactions {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.dashboard .recent-transactions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard .recent-transactions ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
